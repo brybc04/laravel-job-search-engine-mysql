@@ -64,6 +64,7 @@ Route::patch('users/{user}', ['as' => 'home', 'uses' => 'UserController@update']
 Route::get('/{searchKey}'  , 'PagesController@search' );
 Route::post('/{searchKey}' , 'PagesController@search'  );
 
+Auth::routes(['verify' => true]);
 
 //  Route::get('/mycvs', 'CVcontroller@store');
 //  Route::post('/mycvs', 'CVcontroller@store');
