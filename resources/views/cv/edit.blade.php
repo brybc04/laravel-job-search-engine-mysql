@@ -1,31 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+    <div class="container">
 
-            {!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'POST']) !!}
-            <div class="form-group">
-                {{Form::label('mainSkills', 'mainSkills')}}
-                {{Form::text('mainSkills', $post->mainSkills, ['class'=> 'form-control', 'placeholder' => 'Main Skills'])}}
+        {!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'POST']) !!}
+        <div class="form-group">
+            {{Form::label('mainSkills', 'mainSkills')}}
+            {{Form::text('mainSkills', $post->mainSkills, ['class'=> 'form-control', 'placeholder' => 'Main Skills'])}}
+        </div>
 
-            </div>
-
-            <div class="form-group">
+        <div class="form-group">
             {{Form::label('workExperience', 'workExperience')}}
-                    {{Form::textarea('workExperience', $post->workExperience, ['class'=> 'form-control', 'placeholder' => 'Work Experience'])}}
+            {{Form::textarea('workExperience', $post->workExperience, ['class'=> 'form-control', 'placeholder' => 'Work Experience'])}}
+        </div>
 
-                </div>
-
-                <div class="form-group">
-                        {{Form::label('education', 'education')}}
-                        {{Form::text('education', $post->education, ['class'=> 'form-control', 'placeholder' => 'Education'])}}
-
-                    </div>
+        <div class="form-group">
+            {{Form::label('education', 'education')}}
+            {{Form::text('education', $post->education, ['class'=> 'form-control', 'placeholder' => 'Education'])}}
+        </div>
 
 
-            {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+        {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
 
-                {!! Form::close() !!}
+            {!! Form::close() !!}
 
 
   </div>

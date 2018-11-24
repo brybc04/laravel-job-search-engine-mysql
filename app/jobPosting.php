@@ -16,10 +16,10 @@ class jobPosting extends Model
     //time stamps
     public $timestamps = true;
 
-    public function searchableAs()
-    {
-        return 'posts_index';
-    }
+    // public function searchableAs()
+    // {
+    //     return 'posts_index';
+    // }
 
 
 }
